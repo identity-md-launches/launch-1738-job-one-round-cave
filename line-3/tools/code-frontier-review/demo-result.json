@@ -1,0 +1,20 @@
+{
+  "demonstration_passed": true,
+  "ZTO": {
+    "decision": "refuse",
+    "reasons": [
+      "missing-caller-anchor"
+    ],
+    "proved_runtimes": 1
+  },
+  "IMD": {
+    "decision": "refuse",
+    "reasons": [
+      "unresolved-call-operands",
+      "missing-caller-anchor"
+    ],
+    "proved_runtimes": 2,
+    "unresolved_call_site_count": 34
+  },
+  "note": "Historical proof replay; example hash lists copied from evidence are not independent review."
+}

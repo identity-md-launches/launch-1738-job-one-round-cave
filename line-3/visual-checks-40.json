@@ -1,0 +1,11 @@
+{
+  "ancestor_sha256": "6b265ee084c59107492703cd621e77071f21bc971ebe377acaef3eefc5fb8782",
+  "wall_sha256": "ca738455f059296397505581b8fa1933285fa14b174b7e4a123ef78f51fed7b0",
+  "wall": {"format": "PNG", "dimensions": [1254, 1254], "mode": "RGB 8-bit"},
+  "thumbnail": {"format": "JPEG", "dimensions": [512, 512], "bytes": 62073},
+  "addition_box": [430, 829, 578, 982],
+  "changed_pixels": 12589,
+  "changed_pixels_outside_addition": 0,
+  "unmet_visual_requirements": [],
+  "visual_review": "Inspected full PNG, JPEG and enlarged crops of the two inherited hands and new ring. Both inherited hands retain five digits, four fingers and one thumb. The addition has no hands or handprints. Main Pepe retains wide mouth and heavy-lidded eyes. No letters, numbers, captions, signatures, logos, watermarks, borders or forbidden symbols observed."
+}
