@@ -15,6 +15,31 @@ class AlignmentTests(unittest.TestCase):
     def test_changed_block_or_target_does_not_align(self):
         self.assertEqual(align(code("0x2"), gas())["status"], "not_aligned")
         self.assertEqual(align(code(), gas(target="0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7"))["status"], "not_aligned")
+    def test_matching_missing_context_is_not_alignment(self):
+        for field in ('chain_id', 'source_target', 'code_block'):
+            broken = code()
+            broken.pop(field)
+            with self.assertRaises(ValueError):
+                align(broken, gas())
+        for field in ('number', 'hash'):
+            a, b = code(), gas()
+            a['code_block'].pop(field)
+            b['block'].pop(field)
+            with self.assertRaises(ValueError):
+                align(a, b)
+    def test_boolean_chain_and_invalid_quantities_are_refused(self):
+        for chain in (True, None, '1', 2):
+            a, b = code(), gas()
+            a['chain_id'] = b['chain_id'] = chain
+            with self.assertRaises(ValueError):
+                align(a, b)
+        for number in ('0x01', '1', '', None):
+            with self.assertRaises(ValueError):
+                align(code(number), gas(number))
+        a, b = code(), gas()
+        a['code_block']['hash'] = b['block']['hash'] = '0x1'
+        with self.assertRaises(ValueError):
+            align(a, b)
 
 if __name__ == "__main__":
     unittest.main()

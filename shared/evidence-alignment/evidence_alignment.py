@@ -2,6 +2,7 @@
 """Keep a code-identity report and a gas rehearsal from being joined by address alone."""
 import argparse
 import json
+import re
 from pathlib import Path
 import sys
 
@@ -11,8 +12,30 @@ def load(path):
     path = Path(path).resolve()
     if not path.is_relative_to(ROOT) or path.stat().st_size > 100_000:
         raise ValueError("input must be a small file inside the workspace")
+    def unique(pairs):
+        value = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError("duplicate JSON key: " + key)
+            value[key] = item
+        return value
     with path.open() as handle:
-        return json.load(handle)
+        return json.load(handle, object_pairs_hook=unique,
+                         parse_constant=lambda _: (_ for _ in ()).throw(ValueError("non-finite JSON")))
+
+def context(chain, target, block):
+    if type(chain) is not int or chain != 1:
+        raise ValueError("context requires Ethereum chain ID 1")
+    if not isinstance(target, str) or not re.fullmatch(r"0x[0-9a-f]{40}", target):
+        raise ValueError("context requires a lowercase contract address")
+    if not isinstance(block, dict):
+        raise ValueError("missing block context")
+    number, digest = block.get("number"), block.get("hash")
+    if not isinstance(number, str) or not re.fullmatch(r"0x(?:0|[1-9a-f][0-9a-f]*)", number):
+        raise ValueError("context requires a canonical block quantity")
+    if not isinstance(digest, str) or not re.fullmatch(r"0x[0-9a-f]{64}", digest):
+        raise ValueError("context requires a full block hash")
+    return chain, target, number, digest
 
 def align(code, gas):
     if code.get("schema") != "code-target-proofs-result-v1":
@@ -23,9 +46,8 @@ def align(code, gas):
     source, call = code.get("source_target"), gas.get("call")
     if not isinstance(code_block, dict) or not isinstance(gas_block, dict) or not isinstance(call, dict):
         raise ValueError("missing required context")
-    same = (code.get("chain_id") == gas.get("chain_id") and source == call.get("to")
-            and code_block.get("number") == gas_block.get("number")
-            and code_block.get("hash") == gas_block.get("hash"))
+    same = (context(code.get("chain_id"), source, code_block)
+            == context(gas.get("chain_id"), call.get("to"), gas_block))
     return {"schema": "evidence-alignment-v1", "status": "aligned" if same else "not_aligned",
             "chain_id": {"code": code.get("chain_id"), "gas": gas.get("chain_id")},
             "target": {"code": source, "gas": call.get("to")},

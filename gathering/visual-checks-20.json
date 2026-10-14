@@ -1,0 +1,24 @@
+{
+  "schema": "gathering-visual-checks-v20",
+  "output": "artifacts/gathering/wall-v20.png",
+  "parent_sha256": "889b623b4d93d5fc89e4c08d5e4b9376b87742505d3f1ab5e2e0e1914f935656",
+  "output_sha256": "fe557150aad2d4b1d54031f16f068abe62129eba80c398cb9961dad44f8b5d7e",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG, RGB 8-bit",
+  "addition_rectangle": [
+    484,
+    954,
+    696,
+    1022
+  ],
+  "changed_pixels": 4734,
+  "changed_pixels_outside_addition": 0,
+  "new_hands": 0,
+  "left_hand_digits": 5,
+  "right_hand_digits": 5,
+  "unmet_visual_requirements_observed": [],
+  "review_limits": "Inherited marks and both five-digit hands visually reviewed; all parent pixels outside the small addition are conserved exactly. No independent visual certification."
+}

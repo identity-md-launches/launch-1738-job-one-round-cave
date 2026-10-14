@@ -1,0 +1,14 @@
+{
+  "source_tools": [
+    "line-3/tools/code-target-proofs",
+    "line-4/tools/gas-cap-rehearsal"
+  ],
+  "copied": {
+    "zto-evidence.json": "fc10951c28a97b47b66a47bba6b6322ad8274e932071548515e75d984d599e28",
+    "zto-request.json": "3d5c761f7e86d05e73478f5778e3adc65160beb9b9c0d1d4491960b69db2b283"
+  },
+  "code_proof_source": "https://eth.drpc.org",
+  "code_proof_block_decimal": 26190345,
+  "runtime_dependencies": "Committed adjacent line sources; Python standard library only",
+  "authenticity": "Code proof verified relative to supplied header; consensus anchor and historical call RPC claims unauthenticated."
+}

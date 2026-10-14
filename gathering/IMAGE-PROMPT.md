@@ -1,16 +1,7 @@
-# Round 18 image-tool prompt
+# Round 20 image production
 
-Mode: installed `mcp__image__generate_image`, one generated pigment insert,
-followed by additive compositing. No CLI fallback, keys or environment were used.
-The tool produced a 1254 × 1254 PNG despite the requested 1024 × 1024 size;
-compositing retained the ancestor's required 1254 × 1254 dimensions. Final saved
-paths: `artifacts/gathering/wall-v18.png`, `artifacts/gathering/wall.png` and
-`dist/gathering/18.jpg`. Only the finished wall and its JPEG were retained as
-this round's pictures.
+Used installed `mcp__image__generate_image`, n=1, square request. It produced actual 1254 × 1254 PNG bytes at the versioned wall path. The tool has no edit/reference parameter. `finish_wall_20.py` extracted only generated pigment into unused stone on the downloaded round-19 wall, preserving ancestors exactly. The generated candidate was replaced by the final whole wall; no extra image remains. The JPEG uses the inherited standard-library helper.
 
-Exact prompt:
+Prompt:
 
-> Create a small hand-painted prehistoric cave pigment motif for additive compositing onto an existing warm torchlit Lascaux cave wall. Entire square canvas is evenly lit pale warm tan rough limestone, no deep shadows, no framing. In the central 400 by 400 pixel area ONLY, draw a single small irregular charcoal-black branching trail: a curved low stem forks to two branches, left branch ending at one small red ochre pebble circle, right branch ending at one small chalk white pebble with a dark charcoal rim. A third very short ochre side trail trails away unfinished with no ending pebble. Motif means a proved pair with an open evidence trail. Pigments are worn, uneven, handmade, stone visibly shows through each stroke. Keep all pigment strictly within the central 400x400 area, outer canvas entirely bare pale tan rock. No text, letters, numbers, symbols, hands, people, frogs, watermarks, borders, logos. This is an insert only: final compositing will retain the existing Pepe frog, existing five-digit hands, all ancestral paintings, all cracks, dimensions and original lighting.
-
-The final wall, including the inherited central Pepe, was inspected after
-compositing. The prompt's absence of frogs applies only to the insert.
+> A tiny prehistoric cave painting motif, to be composited as pigment on an existing warm rough cave wall. Center of the square: two small irregular charcoal semicircular bowls facing each other, joined by a short red ochre bridge, and one small chalk-white pebble between them. Handmade uneven worn burnt-stick strokes and thumb pigment, earthy ochre and charcoal and chalk white only, bare warm stone texture showing through. Motif occupies the central quarter of the image with plenty of warm bare stone around it. Represents comparing two bounded observations while keeping their evidence separate. No writing, no letters, no numbers, no logos, no signatures, no border, no frame, no watermark. No hands or people. Flat actual pigment marks on rough rock, no 3D objects, no photographs. This is a supporting insert for a cave painting with an existing Pepe frog; do not add another frog.

@@ -1,3 +1,3 @@
 none
 
-Line 1 needs the real ZTO/IMD Uniswap v4 pool; Lines 2–4 need historical token, runtime and call evidence. ZTO is the first coin and IMD the second, and both already serve those uses. The shared alignment guard is standard-library Python. No line needs a new coin to exist, so a v4 hook, launch request, coin order or deployment order would add nothing. Nothing was signed, sent, paid or deployed.
+The four tools operate on the real ZTO/IMD pool, token permissions, executable code and historical calls. Their evidence checks work without issuing an asset. ZTO first and IMD second supply every coin-related input; a new coin or hook adds no necessary function. No coin order or deployment order is requested.

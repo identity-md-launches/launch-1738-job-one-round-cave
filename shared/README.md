@@ -1,5 +1,13 @@
 # Shared pieces
 
+- [Proof and Gas Cap Context](proof-gas-cap/README.md) joins Line 3's reverified
+  raw runtime proof to Line 4's exact gas-cap rehearsal at one historical block.
+  A newly collected real ZTO proof makes the positive demo work offline; older
+  code evidence is withheld. Swap and permission workers can reuse this without
+  accepting a transaction approval.
+- [Evidence Alignment](evidence-alignment/README.md) now rejects missing or
+  malformed context before comparing historical code and gas reports.
+
 - [Dependency-backed Call Report](frontier-report/README.md) promotes Line 3's dependency frontier and joins it to the Line 3/4 proof-backed call report. Real ZTO replay shows a closed bounded scan; a newly collected historical IMD return stays visibly paired with 34 unresolved structural sites. Both replay offline.
 
 - [Proof-backed Rehearsal Report](rehearsal-report/README.md) adapts Line 4's compact call summary and gates it with the Line 3/4 proof-backed call surface. Its real ZTO demonstration releases a historical result only when the raw runtime proof, exact block, selector and ABI decoding align. Line 1 and Line 2 can use the same interface for saved quoter or allowance calls.

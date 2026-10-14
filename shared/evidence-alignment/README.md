@@ -14,6 +14,11 @@ It prints `not_aligned`: both inputs concern real ZTO, but their saved blocks ar
 different. That is the intended safe result. An `aligned` result is only context
 alignment, not transaction approval or a safety claim.
 
+Round 20 fixes matching missing context being accepted as alignment. Chain ID
+must be integer 1, the address lowercase full hex, the block a canonical RPC
+quantity, and its hash 32 bytes. Duplicate keys and non-finite JSON are refused.
+Four tests pass, including missing fields and boolean chain IDs.
+
 ```sh
 python3 -B -m unittest discover -s shared/evidence-alignment -p 'test_*.py' -v
 ```
