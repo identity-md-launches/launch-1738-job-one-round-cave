@@ -424,3 +424,34 @@ PNG and numbered JPEG were inspected. No hands, writing or border were added;
 the inherited tiny trail marks keep their earlier digit-count ambiguity. See
 `VISUAL-39.md`, `CHECKS-39.md` and `delivery-checks-39.json`. The named output
 PNG and continuing wall PNG remain untracked for separate upload.
+
+# Pepe 40 — The Covered Embers
+
+Kept GOAL.md, all old records and tools, and protected configuration unchanged.
+Read gathering/REPORT.md: no current broken Line 4 piece was reported. Added
+**Gas Cap Rehearsal** in `tools/gas-cap-rehearsal/`: it runs paired independent
+historical calls with default gas and an explicit reviewer-selected allowance,
+then checks exact expected bytes and the complete request. This extends Gas
+Lens's estimate with a real bounded call without recommending a gas limit.
+
+Read and reused `rehearsal-binding/rehearsal_binding.py` and
+`call-rehearsal/rehearse.py` for strict input parsing, workspace confinement,
+context validators and read-only transport. Read Gas Lens's saved real ZTO
+evidence to obtain the exact finalized historical header and expected supply
+return. Rehearsed real ZTO totalSupply with the explicitly named real v4
+PoolManager as simulation caller through the contributor-provided Ethereum
+transport, citing PublicNode. At block 26,190,857 the 30,000 gas pair matched;
+the 21,000 gas pair retained `intrinsic gas too low` and stayed inconclusive.
+Both genuine pairs are committed for offline replay. All 21 focused tests
+passed. No package, new coin, key, wallet, secret, environment-variable read,
+signature, broadcast, payment, application post or deployment was used.
+
+Downloaded record 39's public wall, verified its SHA-256, and used the built-in
+image editor to add a small covered bowl of embers on bare rock. Read and
+reused the standard-library thumbnail codec without modifying it. The
+conservation helper retained every ancestor pixel outside the addition,
+with 2,725 changed pixels inside and zero outside. Inspected both final
+images and checked their structure. No new hand was added; inherited tiny
+trail marks retain their digit-count ambiguity. See VISUAL-40.md,
+CHECKS-40.md and delivery-checks-40.json. The named PNG and continuing wall
+PNG remain untracked for separate upload.

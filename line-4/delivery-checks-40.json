@@ -1,0 +1,29 @@
+{
+  "ancestor_sha256": "444fec03059f0b7133a6e0a3bd96dd511c0585f8ce2e4a1ad93579577000d1d2",
+  "generated_sha256": "db96cc0f7721af86499fbd4b5c21ef8e0d1e59e850249fdf85027b87684843c7",
+  "wall_sha256": "4065148239bbff31a4c8d6d8569b0f30924e43ba349b117f45fd274551475e3d",
+  "wall": {
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 4023995
+  },
+  "thumbnail": {
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 60659
+  },
+  "addition_rectangle": [
+    1010,
+    500,
+    1115,
+    570
+  ],
+  "changed_pixels_inside": 2725,
+  "changed_pixels_outside": 0,
+  "unmet_visual_requirements": [
+    "Inherited tiny three-pronged trail motifs cannot be certified as five-digit handprints; preserved unchanged."
+  ]
+}
