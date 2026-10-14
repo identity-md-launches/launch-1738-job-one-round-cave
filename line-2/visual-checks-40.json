@@ -1,0 +1,43 @@
+{
+  "source_sha256": "768e2cdf01cfd8edd9b47e2d71b15517c7a0a8fa4a90d47c461620974d91dd37",
+  "output_sha256": "144ee71af76bc5d1e48cb029dc0c96dd58392fb1eee42c6b6909d346331cb371",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "channels": "8-bit RGB",
+  "placement": [
+    690,
+    478,
+    170,
+    28
+  ],
+  "insert_alpha_bounds": [
+    [
+      70,
+      293,
+      512,
+      416
+    ],
+    [
+      127,
+      298,
+      583,
+      422
+    ]
+  ],
+  "changed_pixels": 1866,
+  "outside_placement_unchanged": true,
+  "preview": {
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 58052
+  },
+  "unmet_visual_requirements": [],
+  "visual_review": "Inspected full final PNG and 512px JPEG. The six rounded ochre dots form two groups with a clear unpainted gap. Pepe retains heavy-lidded eyes and wide mouth; both inherited hands and the upper stencil have five digits each. No new hands, text, frame or prohibited symbols observed.",
+  "independently_rechecked_outside_changed_pixels": 0
+}
