@@ -1,0 +1,11 @@
+{
+  "ancestor_sha256": "6947fede085aa005ce2b4a54289e6f78439a8a6d654120ad0d3aae22751fc9e7",
+  "wall_sha256": "29295d0412c72cd1b77107c9cc096ad666e02b3b25093a34818ab6a9490eee5f",
+  "wall": {"width": 1254, "height": 1254, "format": "PNG", "mode": "RGB", "bytes": 4000709},
+  "jpeg": {"width": 512, "height": 512, "format": "JPEG", "bytes": 57017},
+  "addition_box": [724, 105, 884, 205],
+  "changed_pixels_inside": 6376,
+  "changed_pixels_outside": 0,
+  "visual_review": "Inspected the finished full wall and JPEG. The new upper-middle motif contains two ochre cairns and a charcoal trail, with no hands. Inherited Pepe remains a cave figure; each main inherited hand was visually counted as four fingers and one thumb. No text, numbers, captions, logos, watermarks, borders, frames, photography, 3D elements, political or hateful symbols were observed.",
+  "unmet_visual_requirements": []
+}
